@@ -30,15 +30,6 @@ public class XLSXReader {
         this.name = name;
     }
 
-    public static void main(String[] args) throws IOException, InvalidFormatException {
-        String name = args[0];
-        XLSXReader reader = new XLSXReader(name);
-//        IntStream.rangeClosed(3, 17).forEach(i -> reader.override("K" + i));
-//        reader.override("K21,K22,K23");
-//        reader.override("S4,S5,S6,S7,S8");
-        System.out.println(reader.process());
-    }
-
     public static String[] depends(String formula) {
         List<String> ids = new ArrayList<>();
         StringBuilder sb = new StringBuilder();
