@@ -24,6 +24,8 @@ public class XLSXReaderTest {
     public void testProcess() throws IOException, InvalidFormatException {
         String name = "example1.xlsx";
         XLSXReader reader = new XLSXReader(name);
+        String process = reader.process();
+        System.out.println(process);
         assertEquals(
                 "    double B3;\n" +
                         "    double C3;\n" +
@@ -52,7 +54,7 @@ public class XLSXReaderTest {
                         "        B9 = FLOOR(C3, 0.1);\n" +
                         "    }\n" +
                         "    public void twoPass() {\n" +
-                        "    }\n", reader.process());
+                        "    }\n", process);
 
     }
 }
